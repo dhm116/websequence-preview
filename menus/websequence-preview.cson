@@ -1,0 +1,20 @@
+'menu': [
+  'label': 'Packages'
+  'submenu': [
+    'label': 'WebSequence Preview'
+    'submenu': [
+      'label': 'Toggle Preview'
+      'command': 'websequence-preview:toggle'
+    ]
+  ]
+]
+
+'context-menu':
+  '.websequence-preview': [
+    {label: 'Copy As HTML', command: 'core:copy'}
+    {label: 'Save As HTML\u2026', command: 'core:save-as'}
+  ]
+  '.tree-view .file .name[data-name$=\\.websequence]':
+    [{label: 'WebSequence Preview', command:  'websequence-preview:preview-file'} ]
+  '.tree-view .file .name[data-name$=\\.txt]':
+    [{label: 'WebSequence Preview', command:  'websequence-preview:preview-file'} ]
